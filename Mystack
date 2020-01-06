@@ -1,0 +1,31 @@
+
+public class Mystack 
+{
+     private int top;
+     private int []stack;
+     private int Maxsize;
+     public Mystack(int max)
+     {
+    	 top=-1;
+    	 Maxsize=max;
+    	 stack=new int [max];
+     }
+     public void push(int num)
+     {
+    	 if(top<Maxsize-1)
+    	stack[++top]=num;
+    	
+     }
+     public int pop()
+     {
+    	 int number=stack[top];
+    	 top--;
+    	 return number;
+     }
+     public void Printstack(Mystack p)
+     {
+    	 while(p.top>=0)
+    		 System.out.print(p.stack[top--]+" ");
+     }
+	  
+}
